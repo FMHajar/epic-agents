@@ -1,0 +1,13 @@
+{
+  "name": "epic-agents",
+  "version": "0.1.0",
+  "description": "Two-agent pipeline for epic refinement and user story generation",
+  "scripts": {
+    "start": "ts-node --transpile-only agents.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "ts-node": "^10.9.2"
+  }
+}
