@@ -1,10 +1,11 @@
 {
   "name": "epic-agents",
   "version": "0.1.0",
-  "description": "Two-agent pipeline for epic refinement and user story generation",
+  "description": "Multi-agent pipeline for epic refinement, user story generation, workflow creation and backlog generation",
   "scripts": {
     "start": "ts-node --transpile-only agents.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "start:full": "ts-node --transpile-only fullPipeline.ts"
   },
   "devDependencies": {
     "typescript": "^5.8.3",

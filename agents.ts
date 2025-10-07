@@ -12,7 +12,7 @@
  *   template based on your backlog standards.
  */
 
-class EpicRefinerAgent {
+export class EpicRefinerAgent {
   /**
    * Refine an epic description by performing basic cleanup and
    * returning a new string. If additional processing is needed
@@ -27,7 +27,7 @@ class EpicRefinerAgent {
   }
 }
 
-class UserStoriesGeneratorAgent {
+export class UserStoriesGeneratorAgent {
   /**
    * Generate user stories from a refined epic. This simplistic
    * implementation splits the epic into sentences and returns one
@@ -72,6 +72,12 @@ async function runPipeline(epic: string) {
 // Example invocation for testing
 const exampleEpic =
   'Build a mobile app for our bookstore that allows users to browse books and order them online. We also need to manage inventory and track customer orders in real time.';
-runPipeline(exampleEpic).catch((err) => {
-  console.error(err);
-});
+// Only run the example when this file is executed directly (not when imported)
+if (typeof require !== 'undefined' && require.main === module) {
+  runPipeline(exampleEpic).catch((err) => {
+    console.error(err);
+  });
+}
+
+// Export the runPipeline function for use in other modules
+export { runPipeline };
